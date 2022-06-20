@@ -6,12 +6,9 @@ import Footer from './Components/Footer';
 import HomeScreen from './Screens/HomeScreen';
 import ProductScreen from './Screens/ProductScreen';
 import CartScreen from './Screens/CartScreen';
+import LoginScreen from './Screens/LoginScreen';
 
 function App() {
-  const location = {
-    pathname: '/cart/:id',
-    search: '?'
-  }
   return (
     <Router>
       <Header />
@@ -20,6 +17,7 @@ function App() {
             <Routes>
               <Route exact path='/' element={<HomeScreen />}/>
               <Route exact path='/product/:id' element={<ProductScreen />}/>
+              <Route exact path='/login' element={<LoginScreen />}/>
               <Route path='/cart/:id' element={<CartScreen />}/>
               <Route path='/cart' element={<CartScreen />} exact/>
             </Routes>
